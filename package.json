@@ -1,0 +1,16 @@
+{
+  "name": "run-contract-engine",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "A minimal runtime for managing run manifests in AI workflows",
+  "main": "runtime/run-generator.js",
+  "keywords": [
+    "workflow",
+    "runtime",
+    "schema",
+    "state-machine",
+    "ai"
+  ],
+  "license": "MIT"
+}

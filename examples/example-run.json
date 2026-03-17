@@ -1,0 +1,16 @@
+{
+  "runId": "20260317-000000-demo",
+  "taskId": "task-0001",
+  "project": "demo",
+  "profile": "default",
+  "createdAt": "2026-03-17T00:00:00+09:00",
+  "status": "pending",
+  "agents": [
+    "planner"
+  ],
+  "artifacts": [],
+  "validation": {
+    "run": "pending"
+  },
+  "notes": "Example run manifest"
+}

@@ -1,0 +1,94 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "AI Factory Run",
+  "type": "object",
+  "required": [
+    "runId",
+    "taskId",
+    "project",
+    "profile",
+    "createdAt",
+    "status",
+    "agents",
+    "artifacts",
+    "notes"
+  ],
+  "properties": {
+    "runId": {
+      "type": "string",
+      "description": "Unique run identifier"
+    },
+    "taskId": {
+      "type": ["string", "null"],
+      "description": "Related task identifier"
+    },
+    "project": {
+      "type": "string",
+      "description": "Project name"
+    },
+    "profile": {
+      "type": "string",
+      "description": "Execution profile name"
+    },
+    "createdAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Run creation timestamp in ISO 8601 format"
+    },
+    "updatedAt": {
+      "type": "string",
+      "format": "date-time",
+      "description": "Last manifest update timestamp in ISO 8601 format"
+    },
+    "status": {
+      "type": "string",
+      "enum": ["pending", "in_progress", "completed", "failed", "needs_review"],
+      "description": "Overall run status"
+    },
+    "agents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Agents involved in the run"
+    },
+    "artifacts": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Paths or references to run artifacts"
+    },
+    "validation": {
+      "type": "object",
+      "description": "Validation results for run-scoped artifacts",
+      "required": [
+        "run"
+      ],
+      "properties": {
+        "run": {
+          "type": "string",
+          "enum": ["pending", "passed", "failed"]
+        },
+        "task": {
+          "type": "string",
+          "enum": ["pending", "passed", "failed"]
+        },
+        "eval": {
+          "type": "string",
+          "enum": ["pending", "passed", "failed"]
+        },
+        "plannerTrace": {
+          "type": "string",
+          "enum": ["pending", "passed", "failed"]
+        }
+      },
+      "additionalProperties": false
+    },
+    "notes": {
+      "type": "string",
+      "description": "Optional run-level notes"
+    }
+  },
+  "additionalProperties": false
+}

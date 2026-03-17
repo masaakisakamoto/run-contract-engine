@@ -82,3 +82,11 @@ Experimental, but already usable as a minimal building block for AI workflow run
 ## License
 
 MIT
+
+## Used by
+
+### AI Factory
+
+An experimental AI workflow runtime for building AI-powered development systems.
+
+https://github.com/masaakisakamoto/AI-Factory
